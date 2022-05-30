@@ -1,3 +1,7 @@
+<?php
+include 'account/includes/connect.php';
+$sql = mysqli_query($con, "SELECT * FROM items;");
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -305,17 +309,23 @@
          <hr class="heading_space">
          <div class="slider_wrap">
         <div id="service-slider" class="owl-carousel">
-          <div class="item">
-            <div class="item_inner">
-            <div class="image">
-              <img src="images/Shawarma.jpg" alt="Services Image">
-              <a  href="./account/register.php"></a>
+          <?php
+          while ($row = mysqli_fetch_assoc($sql)) {
+            echo " <div class=\"item\">
+            <div class=\"item_inner\">
+            <div class=\"image\">
+            <img src=\"data:image/jpeg;base64," . base64_encode($row['image']). " alt=\"Services Image\">
+              <a  href=\"./account/register.php\"></a>
             </div>
-              <h3><a href="./account/register.php">Chicken Shawarma</a></h3>
+              <h3><a href=\"./account/register.php\">".$row['name']."</a></h3>
               <p>Enjoy Delicious Food!</p>
             </div>
-          </div>
-          <div class="item">
+          </div>";
+          
+          }
+         
+          ?>
+          <!-- <div class="item">
             <div class="item_inner">
               <div class="image">
               <img src="images/Burger.jpg" alt="Services Image">
@@ -343,8 +353,8 @@
               </div>
               <h3><a href="./account/register.php">Aaallu Samosa</a></h3>
               <p>Enjoy Delicious Food!</p>
-            </div>
-          </div>
+            </div> -->
+          <!-- </div> -->
         </div>
         </div>
       </div>
@@ -352,13 +362,14 @@
         <h2 class="heading">Our &nbsp; Menu</h2>
         <hr class="heading_space">
         <ul class="menu_widget">
-          <li>Chicken Shawarma<span>PKR 999.00</span></li>
-          <li>Seekh Kabab<span>PKR 500.00</span></li>
-          <li>Beef Burger<span>399.00</span></li>
-          <li>Aaallu Samosa<span>PKR 250.00</span></li>
-          <li>Chicken Tikka<span>PKR 800.00</span></li>
-          <li>Malai Boti<span>PKR 1200.00</span></li>
-          <li>Vegetable Roll<span>PKR 120.00</span></li>
+        <?php
+        mysqli_data_seek($sql,0);
+          while ($row = mysqli_fetch_assoc($sql)) {
+            
+            echo "<li>".$row['name']."<span> PKR ". $row['price']."</span></li>";
+          }
+         
+          ?>
         </ul>
          <h3>Other Special Menu</h3>
          <p>Enjoy Delicious Food!</p>
@@ -633,7 +644,7 @@
         <hr class="heading_space">
       <div class="row">  
        <div class="col-md-8" style="margin-left:12vw">
-       <form action="user_check.php" id="order_form" class="callus">
+       <form onSubmit="return false" id="order_form" class="callus">
             <div class="row">
             <div class="form-group col-md-12">
             <div id="result" class="text-center"></div></div></div>
@@ -660,11 +671,11 @@
                   <div class="form-group">
                     
                     <select class="form-control" id="deal" name="deal">
-                      <option> Select Food </option>
-                      <option value="1"> Aallu Samosa (PKR250) </option>
-                      <option value="2"> Seekh Kabab (PKR500) </option>
-                      <option value="3"> Shawarma (PKR999) </option>
-                      <option value="4"> Deal Four (PKR1300) </option>
+                       <option> Select Deal </option>
+                       <option> Deal One ($200) </option>
+                       <option> Deal Two ($500) </option>
+                       <option> Deal Three ($900) </option>
+                       <option> Deal Four ($1300) </option>
                     </select>
                   </div>
                 </div>

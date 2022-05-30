@@ -1,3 +1,7 @@
+<?php
+include 'account/includes/connect.php';
+$sql = mysqli_query($con, "SELECT * FROM items;");
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -127,13 +131,13 @@
         <div class="price padding-bottom">
           <div class="price_body">
              <ul class="pricing_feature">
-              <li>Zoozoo Chicken<strong>PKR 40</strong></li>
-              <li>Daeji Bulgogi <strong>PKR 35</strong> </li>
-              <li>Chow mein <strong>PKR 100 - PKR 25</strong> </li>
-              <li>yeast muffins <strong>PKR 280</strong> </li>
-              <li>Crispy Chicken & Vagi Rolls <strong>PKR 786</strong> </li>
-              <li>Salmon Filet <strong>PKR 700</strong> </li>
-              <li>yeast muffins<strong>PKR 999</strong> </li>
+             <?php
+          while ($row = mysqli_fetch_assoc($sql)) {
+            
+            echo "<li>".$row['name']."<strong> PKR ". $row['price']."</strong></li>";
+          }
+         
+          ?>
             </ul>
           </div>
         </div>

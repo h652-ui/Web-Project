@@ -1,3 +1,8 @@
+<?php
+include 'account/includes/connect.php';
+$sql = mysqli_query($con, "SELECT * FROM items;");
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -166,19 +171,14 @@
     <div class="row">
       <div class="col-md-4">
         <ul class="menu_widget">
-          <li>Chicken Shawarma<span>PKR 999.00</span></li>
-          <li>Seekh Kabab<span>PKR 500.00</span></li>
-          <li>Beef Burger<span>399.00</span></li>
-          <li>Aaallu Samosa<span>PKR 250.00</span></li>
-          <li>Chicken Tikka<span>PKR 800.00</span></li>
-          <li>Malai Boti<span>PKR 1200.00</span></li>
-          <li>Vegetable Roll<span>PKR 120.00</span></li>
-          <li>Pizza Samosa<span>PKR 850.00</span></li>
-          <li>Afgani Tikka<span>PKR 1800.00</span></li>
-          <li>Murgh Daal<span>PKR 400.00</span></li>
-          <li>Chicken Roll<span>PKR 220.00</span></li>
-          <li>Box of Cookies<span>PKR 1000.00</span></li>
-          <!-- <li>Pastry<span>PKR 700.00</span></li> -->
+        <?php
+        // mysqli_data_seek($sql,0);
+          while ($row = mysqli_fetch_assoc($sql)) {
+            
+            echo "<li>".$row['name']."<span> PKR ". $row['price']."</span></li>";
+          }
+         
+          ?>
         </ul>
          <h3>Other Special Menu</h3>
          <p>Enjoy Delicious Food!</p>
@@ -188,19 +188,30 @@
       <div class="zerogrid">
           <div class="wrap-container">
             <div class="wrap-content clearfix">
-              <div class="col-1-2">
-              <div class="wrap-col first">
-                  <div class="item-container"> 
-                   <img src="images/Shawarma.jpg" alt="cook"/>
-                   <div class="overlay">
-                       <a class="overlay-inner fancybox" href="images/Shawarma.jpg" data-fancybox-group="gallery">
-                           Shawarma
+              <?php
+              mysqli_data_seek($sql,0);
+              $count=0;
+              while($row = mysqli_fetch_assoc($sql) )
+              {
+              echo "<div class=\"col-1-2\">
+              <div class=\"wrap-col first\">
+                  <div class=\"item-container\"> 
+                  <img src=\"data:image/jpeg;base64," . base64_encode($row['image'])." alt=\"cook\"/>
+                   <div class=\"overlay\">
+                       <a class=\"overlay-inner fancybox\" href=\"\"  data-fancybox-group=\"gallery\">
+                           ".$row['name'] ."
                        </a> 
-                   </div>
+                   </div>".$row['name'] ."
                   </div>
                 </div>
-              </div>
-              <div class="col-1-2">
+              </div>";
+              $count++;
+              if($count==4)
+              break;
+            }
+              
+              ?>
+              <!-- <div class="col-1-2">
               <div class="wrap-col first">
                   <div class="item-container"> 
                    <img src="images/Samosa.png" alt="cook"/> 
@@ -211,8 +222,8 @@
                    </div>
                    </div>
                 </div>
-              </div>
-              <div class="col-1-2">
+              </div> -->
+              <!-- <div class="col-1-2">
               <div class="wrap-col">
                   <div class="item-container"> 
                    <img src="images/Kabab.jpg" alt="cook"/> 
@@ -223,8 +234,8 @@
                    </div>
                     </div>
                 </div>
-              </div>
-              <div class="col-1-2">
+              </div> -->
+              <!-- <div class="col-1-2">
               <div class="wrap-col">
                   <div class="item-container"> 
                    <img src="images/Burger.jpg" alt="cook"/> 
@@ -235,7 +246,7 @@
                     </div>
                    </div>
                  </div>
-               </div>
+               </div> -->
             </div>
           </div>
         </div>
@@ -258,20 +269,29 @@
       <div class="col-md-12">
         <div class="cheffs_wrap_slider">
           <div id="news-slider" class="owl-carousel">
-            <div class="item">
-              <div class="news_content">
-               <img src="images/Samosa.png" alt="Docotor">
-               <div class="date_comment">
+          <?php
+              mysqli_data_seek($sql,0);
+              $count=0;
+              while($row = mysqli_fetch_assoc($sql) )
+              {
+              echo "<div class=\"item\">
+              <div class=\"news_content\">
+              <img src=\"data:image/jpeg;base64," . base64_encode($row['image'])." alt=\"cook\"/>
+               <div class=\"date_comment\">
                   <span>22<small>apr</small></span>
-                  <a href="#."><i class="icon-comment"></i> 5</a>
+                  <a href=\"#.\"><i class=\"icon-comment\"></i> 5</a>
                </div>
-               <div class="comment_text">
-                 <h3><a href="#.">Aaallu Samosa</a></h3>
+               <div class=\"comment_text\">
+                 <h3><a href=\"#.\">".$row['name']."</a></h3>
                  <p>Enjoy Delicious Food!</p>
                </div>
               </div>
-            </div>
-            <div class="item">
+            </div>";
+            }
+              
+              ?>
+            
+            <!-- <div class="item">
               <div class="news_content">
                <img src="images/Kabab.jpg" alt="Docotor">
                <div class="date_comment">
@@ -310,7 +330,7 @@
                  <p>Enjoy Delicious Food!</p>
                </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
