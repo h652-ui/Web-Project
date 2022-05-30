@@ -314,7 +314,7 @@ $sql = mysqli_query($con, "SELECT * FROM items;");
             echo " <div class=\"item\">
             <div class=\"item_inner\">
             <div class=\"image\">
-            <img src=\"data:image/jpeg;base64," . base64_encode($row['image']). " alt=\"Services Image\">
+            <img src=\"data:image/jpeg;base64," . base64_encode($row['image']). "\" alt=\"Services Image\">
               <a  href=\"./account/register.php\"></a>
             </div>
               <h3><a href=\"./account/register.php\">".$row['name']."</a></h3>

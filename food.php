@@ -196,7 +196,7 @@ $sql = mysqli_query($con, "SELECT * FROM items;");
               echo "<div class=\"col-1-2\">
               <div class=\"wrap-col first\">
                   <div class=\"item-container\"> 
-                  <img src=\"data:image/jpeg;base64," . base64_encode($row['image'])." alt=\"cook\"/>
+                  <img src=\"data:image/jpeg;base64," . base64_encode($row['image'])." \"alt=\"cook\"/>
                    <div class=\"overlay\">
                        <a class=\"overlay-inner fancybox\" href=\"\"  data-fancybox-group=\"gallery\">
                            ".$row['name'] ."
@@ -276,7 +276,7 @@ $sql = mysqli_query($con, "SELECT * FROM items;");
               {
               echo "<div class=\"item\">
               <div class=\"news_content\">
-              <img src=\"data:image/jpeg;base64," . base64_encode($row['image'])." alt=\"cook\"/>
+              <img src=\"data:image/jpeg;base64," . base64_encode($row['image'])." \"alt=\"cook\"/>
                <div class=\"date_comment\">
                   <span>22<small>apr</small></span>
                   <a href=\"#.\"><i class=\"icon-comment\"></i> 5</a>
