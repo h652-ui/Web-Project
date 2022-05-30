@@ -139,9 +139,8 @@ $sql = mysqli_query($con, "SELECT * FROM blog;");
           </ul>
          <div class=\"image_container\">
          <img src=\"data:image/jpeg;base64," . base64_encode($row['Image']) . "\" class=\"img-responsive\" alt=\"blog post\">
-         </div>
-         <p>" . $row["Blog"] . "</p>
-         <a class=\"btn-common button3\" href=\"blog-detail.html\">Read more</a>
+         </div><div>".str_split($row["Blog"], intval(strlen($row["Blog"])*0.07))[0]."...</p></div>
+         <a class=\"btn-common button3\" href=\"blog-detail.php?id=".$row['ID']."\">Read more</a>
        </div>";
           }
           ?>
