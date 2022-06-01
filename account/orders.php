@@ -54,7 +54,7 @@ if ($_SESSION['customer_sid'] == session_id()) {
                     <div class="nav-wrapper">
                         <ul class="left">
                             <li>
-                                <h1 class="logo-wrapper"><a href="../index.html" class="brand-logo darken-1" style="margin:0; padding:1px 0px;"><img style="height:5vw;" src="../images/mylogo.png" alt="logo"></a> <span class="logo-text">Logo</span></h1>
+                                <h1 class="logo-wrapper"><a href="../index.php" class="brand-logo darken-1" style="margin:0; padding:1px 0px;"><img style="height:5vw;" src="../images/mylogo.png" alt="logo"></a> <span class="logo-text">Logo</span></h1>
                             </li>
                         </ul>
                         <ul class="right hide-on-med-and-down">

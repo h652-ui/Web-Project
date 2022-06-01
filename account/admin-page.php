@@ -97,7 +97,7 @@ include 'includes/connect.php';
             <nav class="navbar-color">
                 <div class="nav-wrapper">
                     <ul class="left">                      
-                    <li><h1 class="logo-wrapper"><a href="../index.html" class="brand-logo darken-1" style="margin:0; padding:1px 0px;"><img style="height:5vw;" src="../images/mylogo.png" alt="logo"></a> <span class="logo-text">Logo</span></h1></li>
+                    <li><h1 class="logo-wrapper"><a href="../index.php" class="brand-logo darken-1" style="margin:0; padding:1px 0px;"><img style="height:5vw;" src="../images/mylogo.png" alt="logo"></a> <span class="logo-text">Logo</span></h1></li>
                     </ul>
                 </div>
             </nav>
@@ -351,7 +351,7 @@ include 'includes/connect.php';
 				},';				
 			}
 		echo '},';
-		?>
+		?>},
         messages: {
 			<?php
 			$result = mysqli_query($con, "SELECT * FROM items");
@@ -368,7 +368,7 @@ include 'includes/connect.php';
 				},';				
 			}
 		echo '},';
-		?>
+		?>},
         errorElement : 'div',
         errorPlacement: function(error, element) {
           var placement = $(element).data('error');
