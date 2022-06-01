@@ -56,14 +56,14 @@ include 'includes/wallet.php';
   <!-- End Page Loading -->
 
   <!-- //////////////////////////////////////////////////////////////////////////// -->
-<<<<<<< HEAD
 
-=======
+
+
     <style>
         .mdi-editor-attach-money::before{content:"PKR."}
         .mdi-editor-attach-money::after{content:""}
     </style>
->>>>>>> 26cb1f1 (Laaraib Commit)
+
   <!-- START HEADER -->
   <header id="header" class="page-topbar">
         <!-- start header nav-->
