@@ -31,7 +31,7 @@ $verified = $row['verified'];
   <meta name="msapplication-tap-highlight" content="no">
   <title>Provide Order Details</title>
 
-<<<<<<< HEAD
+
   <!-- Favicons-->
   <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
   <!-- Favicons-->
@@ -41,7 +41,7 @@ $verified = $row['verified'];
   <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
   <!-- For Windows Phone -->
 
-=======
+
  <!-- Favicons-->
  <link rel="icon" href="../images/mylogo.png" sizes="32x32">
         <!-- Favicons-->
@@ -50,7 +50,7 @@ $verified = $row['verified'];
         <meta name="msapplication-TileColor" content="#00bcd4">
         <meta name="msapplication-TileImage" content="../images/mylogo.png">
         <!-- For Windows Phone -->
->>>>>>> 26cb1f1 (Laaraib Commit)
+
 
   <!-- CORE CSS-->
   <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
