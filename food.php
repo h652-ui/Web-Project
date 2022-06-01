@@ -102,12 +102,7 @@ $sql = mysqli_query($con, "SELECT * FROM items;");
                     <li><a href="faq.html">FAQ</a></li>
                   </ul>
                  </li>
-                 <li class="dropdown active">
-                  <a href="" style="background-color: white; border: 2px solid #e25111; margin-top: 20px"><input type="search" style="background-color:white ;" placeholder="Search Here" name="" id=""></a>
-                </li>
-                <li >
-                 <button style=" padding: 5px;margin-top: 20.5px;border-radius: 10px;border: 2px solid #e25111;">🔍 </button>
-                </li>
+                 
               </ul>
             </div>
          </nav>
