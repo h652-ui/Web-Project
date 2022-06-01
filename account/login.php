@@ -17,12 +17,21 @@ else{
   <title>Login</title>
 
   <!-- Favicons-->
+<<<<<<< HEAD
   <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
   <!-- Favicons-->
   <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
   <!-- For iPhone -->
   <meta name="msapplication-TileColor" content="#00bcd4">
   <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+=======
+  <link rel="icon" href="../images/mylogo.png" sizes="32x32">
+  <!-- Favicons-->
+  <link rel="apple-touch-icon-precomposed" href="../images/mylogo.png">
+  <!-- For iPhone -->
+  <meta name="msapplication-TileColor" content="#00bcd4">
+  <meta name="msapplication-TileImage" content="../images/mylogo.png">
+>>>>>>> 26cb1f1 (Laaraib Commit)
   <!-- For Windows Phone -->
 
 

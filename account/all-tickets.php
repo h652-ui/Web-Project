@@ -14,6 +14,7 @@ include 'includes/wallet.php';
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="msapplication-tap-highlight" content="no">
   <title>Tickets</title>
+<<<<<<< HEAD
 
   <!-- Favicons-->
   <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
@@ -23,6 +24,16 @@ include 'includes/wallet.php';
   <meta name="msapplication-TileColor" content="#00bcd4">
   <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
   <!-- For Windows Phone -->
+=======
+ <!-- Favicons-->
+ <link rel="icon" href="../images/mylogo.png" sizes="32x32">
+        <!-- Favicons-->
+        <link rel="apple-touch-icon-precomposed" href="../images/mylogo.png">
+        <!-- For iPhone -->
+        <meta name="msapplication-TileColor" content="#00bcd4">
+        <meta name="msapplication-TileImage" content="../images/mylogo.png">
+        <!-- For Windows Phone -->
+>>>>>>> 26cb1f1 (Laaraib Commit)
 
 
   <!-- CORE CSS-->
@@ -45,7 +56,14 @@ include 'includes/wallet.php';
   <!-- End Page Loading -->
 
   <!-- //////////////////////////////////////////////////////////////////////////// -->
+<<<<<<< HEAD
 
+=======
+    <style>
+        .mdi-editor-attach-money::before{content:"PKR."}
+        .mdi-editor-attach-money::after{content:""}
+    </style>
+>>>>>>> 26cb1f1 (Laaraib Commit)
   <!-- START HEADER -->
   <header id="header" class="page-topbar">
         <!-- start header nav-->
@@ -214,9 +232,14 @@ include 'includes/wallet.php';
   <footer class="page-footer">
     <div class="footer-copyright">
       <div class="container">
+<<<<<<< HEAD
         <span>Copyright © 2022 <a class="grey-text text-lighten-4" href="#" target="_blank">Students</a> All rights reserved.</span>
         <span class="right"> Design and Developed by <a class="grey-text text-lighten-4" href="#">Students</a></span>
         </div>
+=======
+      <span>Copyright © 2022 <a class="grey-text text-lighten-4" href="#" target="_blank">Students</a> All rights reserved.</span>
+        <span class="right"> Design and Developed by <a class="grey-text text-lighten-4" href="#">Nust Students</a></span></div>
+>>>>>>> fa9cca026676e8d8546e865da6307019ab4e864d
     </div>
   </footer>
     <!-- END FOOTER -->

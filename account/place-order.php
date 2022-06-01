@@ -2,6 +2,7 @@
 include 'includes/connect.php';
 include 'includes/wallet.php';
 $total = 0;
+<<<<<<< HEAD
 if ($_SESSION['customer_sid'] == session_id()) {
   $result = mysqli_query($con, "SELECT * FROM users where id = $user_id");
   while ($row = mysqli_fetch_array($result)) {
@@ -9,6 +10,68 @@ if ($_SESSION['customer_sid'] == session_id()) {
     $address = $row['address'];
     $contact = $row['contact'];
     $verified = $row['verified'];
+=======
+	if($_SESSION['customer_sid']==session_id())
+	{
+$result = mysqli_query($con, "SELECT * FROM users where id = $user_id");
+while($row = mysqli_fetch_array($result)){
+$name = $row['name'];	
+$address = $row['address'];
+$contact = $row['contact'];
+$verified = $row['verified'];
+}
+		?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>Provide Order Details</title>
+
+<<<<<<< HEAD
+  <!-- Favicons-->
+  <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
+  <!-- Favicons-->
+  <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
+  <!-- For iPhone -->
+  <meta name="msapplication-TileColor" content="#00bcd4">
+  <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+  <!-- For Windows Phone -->
+
+=======
+ <!-- Favicons-->
+ <link rel="icon" href="../images/mylogo.png" sizes="32x32">
+        <!-- Favicons-->
+        <link rel="apple-touch-icon-precomposed" href="../images/mylogo.png">
+        <!-- For iPhone -->
+        <meta name="msapplication-TileColor" content="#00bcd4">
+        <meta name="msapplication-TileImage" content="../images/mylogo.png">
+        <!-- For Windows Phone -->
+>>>>>>> 26cb1f1 (Laaraib Commit)
+
+  <!-- CORE CSS-->
+  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <!-- Custome CSS-->    
+  <link href="css/custom/custom.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+
+  <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
+  <link href="js/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen,projection">
+       <style type="text/css">
+  .input-field div.error{
+    position: relative;
+    top: -1rem;
+    left: 0rem;
+    font-size: 0.8rem;
+    color:#FF4081;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+>>>>>>> fa9cca026676e8d8546e865da6307019ab4e864d
   }
 ?>
   <!DOCTYPE html>
@@ -95,6 +158,7 @@ if ($_SESSION['customer_sid'] == session_id()) {
     </div>
     <!-- End Page Loading -->
 
+<<<<<<< HEAD
     <!-- //////////////////////////////////////////////////////////////////////////// -->
 
     <!-- START HEADER -->
@@ -118,6 +182,36 @@ if ($_SESSION['customer_sid'] == session_id()) {
       <!-- end header nav-->
     </header>
     <!-- END HEADER -->
+=======
+  <!-- //////////////////////////////////////////////////////////////////////////// -->
+<<<<<<< HEAD
+
+=======
+  <style>
+    .mdi-editor-attach-money::before{content:"PKR."}
+    .mdi-editor-attach-money::after{content:""}
+  </style>
+>>>>>>> 26cb1f1 (Laaraib Commit)
+  <!-- START HEADER -->
+  <header id="header" class="page-topbar">
+        <!-- start header nav-->
+        <div class="navbar-fixed">
+            <nav class="navbar-color">
+                <div class="nav-wrapper">
+                    <ul class="left">                      
+                      <li><h1 class="logo-wrapper"><a href="index.php" class="brand-logo darken-1"><img src="images/materialize-logo.png" alt="logo"></a> <span class="logo-text">Logo</span></h1></li>
+                    </ul>
+                    <ul class="right hide-on-med-and-down">                        
+                        <li><a href="#" class="waves-effect waves-block waves-light"><i class="mdi-editor-attach-money"><?php echo $balance;?></i></a>
+                        </li>
+                    </ul>						
+                </div>
+            </nav>
+        </div>
+        <!-- end header nav-->
+  </header>
+  <!-- END HEADER -->
+>>>>>>> fa9cca026676e8d8546e865da6307019ab4e864d
 
     <!-- //////////////////////////////////////////////////////////////////////////// -->
 
