@@ -67,7 +67,7 @@ $sql = mysqli_query($con, "SELECT * FROM items;");
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#fixed-collapse-navbar" aria-expanded="false">
                   <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="images/mylogo.png" alt="logo" class="img-responsive"></a>
+                <a class="navbar-brand" href="index.php"><img src="images/mylogo.png" alt="logo" class="img-responsive"></a>
               </div>
               <div id="fixed-collapse-navbar" class="navbar-collapse collapse navbar-right">
                 <ul class="nav navbar-nav">
