@@ -98,7 +98,7 @@ $sql = mysqli_query($con, "SELECT * FROM items;");
                   <ul class="dropdown-menu">
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="menu.php">Menu</a></li>
-                    <li><a href="blog-detail.php">Blog Detail</a></li>
+                    
                     <li><a href="faq.html">FAQ</a></li>
                   </ul>
                  </li>

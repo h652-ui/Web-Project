@@ -92,16 +92,11 @@ $sql = mysqli_query($con, "SELECT * FROM items;");
                     <ul class="dropdown-menu">
                       <li><a href="about.html">About Us</a></li>
                       <li><a href="menu.php">Menu</a></li>
-                      <li><a href="blog-detail.php">Blog Detail</a></li>
+                      
                       <li><a href="faq.html">FAQ</a></li>
                     </ul>
                   </li>
-                  <li class="dropdown active">
-                    <a href="" style="background-color: white; border: 2px solid #e25111; margin-top: 20px"><input type="search" style="background-color:white ;" placeholder="Search Here" name="" id=""></a>
-                  </li>
-                  <li>
-                    <button style=" padding: 5px;margin-top: 20.5px;border-radius: 10px;border: 2px solid #e25111;">🔍 </button>
-                  </li>
+                  
                 </ul>
               </div>
             </nav>
