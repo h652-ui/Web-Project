@@ -15,17 +15,8 @@ include 'includes/connect.php';
   <meta name="msapplication-tap-highlight" content="no">
   <title>Food Menu</title>
 
-<<<<<<< HEAD
-  <!-- Favicons-->
-  <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
-  <!-- Favicons-->
-  <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
-  <!-- For iPhone -->
-  <meta name="msapplication-TileColor" content="#00bcd4">
-  <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
-  <!-- For Windows Phone -->
 
-=======
+
  <!-- Favicons-->
  <link rel="icon" href="../images/mylogo.png" sizes="32x32">
         <!-- Favicons-->
@@ -34,7 +25,7 @@ include 'includes/connect.php';
         <meta name="msapplication-TileColor" content="#00bcd4">
         <meta name="msapplication-TileImage" content="../images/mylogo.png">
         <!-- For Windows Phone -->
->>>>>>> 26cb1f1 (Laaraib Commit)
+
 
   <!-- CORE CSS-->
   <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
@@ -224,22 +215,19 @@ include 'includes/connect.php';
 				$result = mysqli_query($con, "SELECT * FROM items");
 				while($row = mysqli_fetch_array($result))
 				{
-					echo '<tr><td><div class="input-field col s12"><label for="'.$row["id"].'_name">Name</label>';
-					echo '<input value="'.$row["name"].'" id="'.$row["id"].'_name" name="'.$row['id'].'_name" type="text" data-error=".errorTxt'.$row["id"].'"><div class="errorTxt'.$row["id"].'"></div></td>';					
-					echo '<td><div class="input-field col s12 "><label for="'.$row["id"].'_price">Price</label>';
-					echo '<input value="'.$row["price"].'" id="'.$row["id"].'_price" name="'.$row['id'].'_price" type="text" data-error=".errorTxt'.$row["id"].'"><div class="errorTxt'.$row["id"].'"></div></td>';                   
-					echo '<td>';
+					
 					if($row['deleted'] == 0){
-						$text1 = 'selected';
-						$text2 = '';
+            echo '<tr><td><div class="input-field col s12"><label for="'.$row["id"].'_name">Name</label>';
+            echo '<input value="'.$row["name"].'" id="'.$row["id"].'_name" name="'.$row['id'].'_name" type="text" data-error=".errorTxt'.$row["id"].'"><div class="errorTxt'.$row["id"].'"></div></td>';					
+            echo '<td><div class="input-field col s12 "><label for="'.$row["id"].'_price">Price</label>';
+            echo '<input value="'.$row["price"].'" id="'.$row["id"].'_price" name="'.$row['id'].'_price" type="text" data-error=".errorTxt'.$row["id"].'"><div class="errorTxt'.$row["id"].'"></div></td>';                   
+            echo '<td>';
+            echo '
+            <img style="width:22vw;height:12vw;border-radius:24px;margin:auto;display:block" src="data:image/jpeg;base64,'.base64_encode($row['image']).'" id="'.$row["id"].'_image" name="'.$row['id'].'_image" type="file" data-error=".errorTxt'.$row["id"].'"><div class="errorTxt'.$row["id"].'"></div>
+                      </td></tr>';
 					}
-					else{
-						$text1 = '';
-						$text2 = 'selected';						
+					else{					
 					}
-					echo '
-					<img style="width:22vw;height:12vw;border-radius:24px;margin:auto;display:block" src="data:image/jpeg;base64,'.base64_encode($row['image']).'" id="'.$row["id"].'_image" name="'.$row['id'].'_image" type="file" data-error=".errorTxt'.$row["id"].'"><div class="errorTxt'.$row["id"].'"></div>
-                    </td></tr>';
 				}
 				?>
                     </tbody>
@@ -311,8 +299,14 @@ include 'includes/connect.php';
   <footer class="page-footer">
     <div class="footer-copyright">
       <div class="container">
+<<<<<<< HEAD
+        <span>Copyright © 2022 <a class="grey-text text-lighten-4" href="#" target="_blank">Students</a> All rights reserved.</span>
+        <span class="right"> Design and Developed by <a class="grey-text text-lighten-4" href="#">Students</a></span>
+        </div>
+=======
       <span>Copyright © 2022 <a class="grey-text text-lighten-4" href="#" target="_blank">Students</a> All rights reserved.</span>
         <span class="right"> Design and Developed by <a class="grey-text text-lighten-4" href="#">Nust Students</a></span></div>
+>>>>>>> fa9cca026676e8d8546e865da6307019ab4e864d
     </div>
   </footer>
     <!-- END FOOTER -->
