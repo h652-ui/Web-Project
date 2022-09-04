@@ -21,13 +21,18 @@ Here are some of the Ss to overview the site's frontend:
 
 # Footer
 <img src="https://github.com/h652-ui/Web-Project/blob/main/Screen%20Shots/5.jpg">
+
 # Register
 <img src="https://github.com/h652-ui/Web-Project/blob/main/Screen%20Shots/6.jpg">
+
 # Login
 <img src="https://github.com/h652-ui/Web-Project/blob/main/Screen%20Shots/7.jpg">
+
 # Customer View
 <img src="https://github.com/h652-ui/Web-Project/blob/main/Screen%20Shots/8.jpg">
+
 # Admin View
 <img src="https://github.com/h652-ui/Web-Project/blob/main/Screen%20Shots/9.jpg">
+
 # Folder and Code Structure View
 <img src="https://github.com/h652-ui/Web-Project/blob/main/Screen%20Shots/10.jpg">
